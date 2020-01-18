@@ -1,0 +1,715 @@
+|UART
+clk => FREQUENCYDIVIDER:clk_gen.clk_in
+SerialIn => ConversorSet:CVSET.Cserial_input
+ParallelIN[7] => ConversorSet:CVSET.CParalel_input[7]
+ParallelIN[6] => ConversorSet:CVSET.CParalel_input[6]
+ParallelIN[5] => ConversorSet:CVSET.CParalel_input[5]
+ParallelIN[4] => ConversorSet:CVSET.CParalel_input[4]
+ParallelIN[3] => ConversorSet:CVSET.CParalel_input[3]
+ParallelIN[2] => ConversorSet:CVSET.CParalel_input[2]
+ParallelIN[1] => ConversorSet:CVSET.CParalel_input[1]
+ParallelIN[0] => ConversorSet:CVSET.CParalel_input[0]
+SerialOut <= ConversorSet:CVSET.CSerial_output
+TX => ConversorSet:CVSET.TX
+ParallelOut[7] <= ConversorSet:CVSET.Cparallel_output[7]
+ParallelOut[6] <= ConversorSet:CVSET.Cparallel_output[6]
+ParallelOut[5] <= ConversorSet:CVSET.Cparallel_output[5]
+ParallelOut[4] <= ConversorSet:CVSET.Cparallel_output[4]
+ParallelOut[3] <= ConversorSet:CVSET.Cparallel_output[3]
+ParallelOut[2] <= ConversorSet:CVSET.Cparallel_output[2]
+ParallelOut[1] <= ConversorSet:CVSET.Cparallel_output[1]
+ParallelOut[0] <= ConversorSet:CVSET.Cparallel_output[0]
+
+
+|UART|FREQUENCYDIVIDER:clk_gen
+clk_in => CONTADOR:P1.clk_en
+clk_in => myDFF:P3.CLK
+clk_out <= clk_out.DB_MAX_OUTPUT_PORT_TYPE
+T => CONTADOR:P1.t_in
+
+
+|UART|FREQUENCYDIVIDER:clk_gen|CONTADOR:P1
+clk_en => T_TRIGGER:T.CLK
+clr => T_TRIGGER:T.CLEAR
+clr => T_TRIGGER:G1:0:T.CLEAR
+clr => T_TRIGGER:G1:1:T.CLEAR
+clr => T_TRIGGER:G1:2:T.CLEAR
+clr => T_TRIGGER:G1:3:T.CLEAR
+clr => T_TRIGGER:G1:4:T.CLEAR
+clr => T_TRIGGER:G1:5:T.CLEAR
+clr => T_TRIGGER:G1:6:T.CLEAR
+clr => T_TRIGGER:G1:7:T.CLEAR
+clr => T_TRIGGER:G1:8:T.CLEAR
+clr => T_TRIGGER:G1:9:T.CLEAR
+clr => T_TRIGGER:G1:10:T.CLEAR
+clr => T_TRIGGER:G1:11:T.CLEAR
+clr => T_TRIGGER:G1:12:T.CLEAR
+clr => T_TRIGGER:G1:13:T.CLEAR
+clr => T_TRIGGER:G1:14:T.CLEAR
+clr => T_TRIGGER:G1:15:T.CLEAR
+clr => T_TRIGGER:G1:16:T.CLEAR
+clr => T_TRIGGER:G1:17:T.CLEAR
+clr => T_TRIGGER:G1:18:T.CLEAR
+clr => T_TRIGGER:G1:19:T.CLEAR
+clr => T_TRIGGER:G1:20:T.CLEAR
+clr => T_TRIGGER:G1:21:T.CLEAR
+clr => T_TRIGGER:G1:22:T.CLEAR
+clr => T_TRIGGER:G1:23:T.CLEAR
+clr => T_TRIGGER:G1:24:T.CLEAR
+clr => T_TRIGGER:G1:25:T.CLEAR
+clr => T_TRIGGER:G1:26:T.CLEAR
+clr => T_TRIGGER:G1:27:T.CLEAR
+clr => T_TRIGGER:G1:28:T.CLEAR
+clr => T_TRIGGER:G1:29:T.CLEAR
+clr => T_TRIGGER:G1:30:T.CLEAR
+t_in => T_TRIGGER:T.T
+t_in => T_TRIGGER:G1:0:T.T
+t_in => T_TRIGGER:G1:1:T.T
+t_in => T_TRIGGER:G1:2:T.T
+t_in => T_TRIGGER:G1:3:T.T
+t_in => T_TRIGGER:G1:4:T.T
+t_in => T_TRIGGER:G1:5:T.T
+t_in => T_TRIGGER:G1:6:T.T
+t_in => T_TRIGGER:G1:7:T.T
+t_in => T_TRIGGER:G1:8:T.T
+t_in => T_TRIGGER:G1:9:T.T
+t_in => T_TRIGGER:G1:10:T.T
+t_in => T_TRIGGER:G1:11:T.T
+t_in => T_TRIGGER:G1:12:T.T
+t_in => T_TRIGGER:G1:13:T.T
+t_in => T_TRIGGER:G1:14:T.T
+t_in => T_TRIGGER:G1:15:T.T
+t_in => T_TRIGGER:G1:16:T.T
+t_in => T_TRIGGER:G1:17:T.T
+t_in => T_TRIGGER:G1:18:T.T
+t_in => T_TRIGGER:G1:19:T.T
+t_in => T_TRIGGER:G1:20:T.T
+t_in => T_TRIGGER:G1:21:T.T
+t_in => T_TRIGGER:G1:22:T.T
+t_in => T_TRIGGER:G1:23:T.T
+t_in => T_TRIGGER:G1:24:T.T
+t_in => T_TRIGGER:G1:25:T.T
+t_in => T_TRIGGER:G1:26:T.T
+t_in => T_TRIGGER:G1:27:T.T
+t_in => T_TRIGGER:G1:28:T.T
+t_in => T_TRIGGER:G1:29:T.T
+t_in => T_TRIGGER:G1:30:T.T
+output[0] <> T_TRIGGER:T.S1
+output[1] <> T_TRIGGER:G1:0:T.S1
+output[2] <> T_TRIGGER:G1:1:T.S1
+output[3] <> T_TRIGGER:G1:2:T.S1
+output[4] <> T_TRIGGER:G1:3:T.S1
+output[5] <> T_TRIGGER:G1:4:T.S1
+output[6] <> T_TRIGGER:G1:5:T.S1
+output[7] <> T_TRIGGER:G1:6:T.S1
+output[8] <> T_TRIGGER:G1:7:T.S1
+output[9] <> T_TRIGGER:G1:8:T.S1
+output[10] <> T_TRIGGER:G1:9:T.S1
+output[11] <> T_TRIGGER:G1:10:T.S1
+output[12] <> T_TRIGGER:G1:11:T.S1
+output[13] <> T_TRIGGER:G1:12:T.S1
+output[14] <> T_TRIGGER:G1:13:T.S1
+output[15] <> T_TRIGGER:G1:14:T.S1
+output[16] <> T_TRIGGER:G1:15:T.S1
+output[17] <> T_TRIGGER:G1:16:T.S1
+output[18] <> T_TRIGGER:G1:17:T.S1
+output[19] <> T_TRIGGER:G1:18:T.S1
+output[20] <> T_TRIGGER:G1:19:T.S1
+output[21] <> T_TRIGGER:G1:20:T.S1
+output[22] <> T_TRIGGER:G1:21:T.S1
+output[23] <> T_TRIGGER:G1:22:T.S1
+output[24] <> T_TRIGGER:G1:23:T.S1
+output[25] <> T_TRIGGER:G1:24:T.S1
+output[26] <> T_TRIGGER:G1:25:T.S1
+output[27] <> T_TRIGGER:G1:26:T.S1
+output[28] <> T_TRIGGER:G1:27:T.S1
+output[29] <> T_TRIGGER:G1:28:T.S1
+output[30] <> T_TRIGGER:G1:29:T.S1
+output[31] <> T_TRIGGER:G1:30:T.S1
+
+
+|UART|FREQUENCYDIVIDER:clk_gen|CONTADOR:P1|T_TRIGGER:T
+CLK => S2~reg0.CLK
+CLK => S1~reg0.CLK
+T => S2.OUTPUTSELECT
+T => S1.OUTPUTSELECT
+CLEAR => S2~reg0.PRESET
+CLEAR => S1~reg0.ACLR
+S1 <> S1~reg0
+S2 <> S2~reg0
+
+
+|UART|FREQUENCYDIVIDER:clk_gen|CONTADOR:P1|T_TRIGGER:\G1:0:T
+CLK => S2~reg0.CLK
+CLK => S1~reg0.CLK
+T => S2.OUTPUTSELECT
+T => S1.OUTPUTSELECT
+CLEAR => S2~reg0.PRESET
+CLEAR => S1~reg0.ACLR
+S1 <> S1~reg0
+S2 <> S2~reg0
+
+
+|UART|FREQUENCYDIVIDER:clk_gen|CONTADOR:P1|T_TRIGGER:\G1:1:T
+CLK => S2~reg0.CLK
+CLK => S1~reg0.CLK
+T => S2.OUTPUTSELECT
+T => S1.OUTPUTSELECT
+CLEAR => S2~reg0.PRESET
+CLEAR => S1~reg0.ACLR
+S1 <> S1~reg0
+S2 <> S2~reg0
+
+
+|UART|FREQUENCYDIVIDER:clk_gen|CONTADOR:P1|T_TRIGGER:\G1:2:T
+CLK => S2~reg0.CLK
+CLK => S1~reg0.CLK
+T => S2.OUTPUTSELECT
+T => S1.OUTPUTSELECT
+CLEAR => S2~reg0.PRESET
+CLEAR => S1~reg0.ACLR
+S1 <> S1~reg0
+S2 <> S2~reg0
+
+
+|UART|FREQUENCYDIVIDER:clk_gen|CONTADOR:P1|T_TRIGGER:\G1:3:T
+CLK => S2~reg0.CLK
+CLK => S1~reg0.CLK
+T => S2.OUTPUTSELECT
+T => S1.OUTPUTSELECT
+CLEAR => S2~reg0.PRESET
+CLEAR => S1~reg0.ACLR
+S1 <> S1~reg0
+S2 <> S2~reg0
+
+
+|UART|FREQUENCYDIVIDER:clk_gen|CONTADOR:P1|T_TRIGGER:\G1:4:T
+CLK => S2~reg0.CLK
+CLK => S1~reg0.CLK
+T => S2.OUTPUTSELECT
+T => S1.OUTPUTSELECT
+CLEAR => S2~reg0.PRESET
+CLEAR => S1~reg0.ACLR
+S1 <> S1~reg0
+S2 <> S2~reg0
+
+
+|UART|FREQUENCYDIVIDER:clk_gen|CONTADOR:P1|T_TRIGGER:\G1:5:T
+CLK => S2~reg0.CLK
+CLK => S1~reg0.CLK
+T => S2.OUTPUTSELECT
+T => S1.OUTPUTSELECT
+CLEAR => S2~reg0.PRESET
+CLEAR => S1~reg0.ACLR
+S1 <> S1~reg0
+S2 <> S2~reg0
+
+
+|UART|FREQUENCYDIVIDER:clk_gen|CONTADOR:P1|T_TRIGGER:\G1:6:T
+CLK => S2~reg0.CLK
+CLK => S1~reg0.CLK
+T => S2.OUTPUTSELECT
+T => S1.OUTPUTSELECT
+CLEAR => S2~reg0.PRESET
+CLEAR => S1~reg0.ACLR
+S1 <> S1~reg0
+S2 <> S2~reg0
+
+
+|UART|FREQUENCYDIVIDER:clk_gen|CONTADOR:P1|T_TRIGGER:\G1:7:T
+CLK => S2~reg0.CLK
+CLK => S1~reg0.CLK
+T => S2.OUTPUTSELECT
+T => S1.OUTPUTSELECT
+CLEAR => S2~reg0.PRESET
+CLEAR => S1~reg0.ACLR
+S1 <> S1~reg0
+S2 <> S2~reg0
+
+
+|UART|FREQUENCYDIVIDER:clk_gen|CONTADOR:P1|T_TRIGGER:\G1:8:T
+CLK => S2~reg0.CLK
+CLK => S1~reg0.CLK
+T => S2.OUTPUTSELECT
+T => S1.OUTPUTSELECT
+CLEAR => S2~reg0.PRESET
+CLEAR => S1~reg0.ACLR
+S1 <> S1~reg0
+S2 <> S2~reg0
+
+
+|UART|FREQUENCYDIVIDER:clk_gen|CONTADOR:P1|T_TRIGGER:\G1:9:T
+CLK => S2~reg0.CLK
+CLK => S1~reg0.CLK
+T => S2.OUTPUTSELECT
+T => S1.OUTPUTSELECT
+CLEAR => S2~reg0.PRESET
+CLEAR => S1~reg0.ACLR
+S1 <> S1~reg0
+S2 <> S2~reg0
+
+
+|UART|FREQUENCYDIVIDER:clk_gen|CONTADOR:P1|T_TRIGGER:\G1:10:T
+CLK => S2~reg0.CLK
+CLK => S1~reg0.CLK
+T => S2.OUTPUTSELECT
+T => S1.OUTPUTSELECT
+CLEAR => S2~reg0.PRESET
+CLEAR => S1~reg0.ACLR
+S1 <> S1~reg0
+S2 <> S2~reg0
+
+
+|UART|FREQUENCYDIVIDER:clk_gen|CONTADOR:P1|T_TRIGGER:\G1:11:T
+CLK => S2~reg0.CLK
+CLK => S1~reg0.CLK
+T => S2.OUTPUTSELECT
+T => S1.OUTPUTSELECT
+CLEAR => S2~reg0.PRESET
+CLEAR => S1~reg0.ACLR
+S1 <> S1~reg0
+S2 <> S2~reg0
+
+
+|UART|FREQUENCYDIVIDER:clk_gen|CONTADOR:P1|T_TRIGGER:\G1:12:T
+CLK => S2~reg0.CLK
+CLK => S1~reg0.CLK
+T => S2.OUTPUTSELECT
+T => S1.OUTPUTSELECT
+CLEAR => S2~reg0.PRESET
+CLEAR => S1~reg0.ACLR
+S1 <> S1~reg0
+S2 <> S2~reg0
+
+
+|UART|FREQUENCYDIVIDER:clk_gen|CONTADOR:P1|T_TRIGGER:\G1:13:T
+CLK => S2~reg0.CLK
+CLK => S1~reg0.CLK
+T => S2.OUTPUTSELECT
+T => S1.OUTPUTSELECT
+CLEAR => S2~reg0.PRESET
+CLEAR => S1~reg0.ACLR
+S1 <> S1~reg0
+S2 <> S2~reg0
+
+
+|UART|FREQUENCYDIVIDER:clk_gen|CONTADOR:P1|T_TRIGGER:\G1:14:T
+CLK => S2~reg0.CLK
+CLK => S1~reg0.CLK
+T => S2.OUTPUTSELECT
+T => S1.OUTPUTSELECT
+CLEAR => S2~reg0.PRESET
+CLEAR => S1~reg0.ACLR
+S1 <> S1~reg0
+S2 <> S2~reg0
+
+
+|UART|FREQUENCYDIVIDER:clk_gen|CONTADOR:P1|T_TRIGGER:\G1:15:T
+CLK => S2~reg0.CLK
+CLK => S1~reg0.CLK
+T => S2.OUTPUTSELECT
+T => S1.OUTPUTSELECT
+CLEAR => S2~reg0.PRESET
+CLEAR => S1~reg0.ACLR
+S1 <> S1~reg0
+S2 <> S2~reg0
+
+
+|UART|FREQUENCYDIVIDER:clk_gen|CONTADOR:P1|T_TRIGGER:\G1:16:T
+CLK => S2~reg0.CLK
+CLK => S1~reg0.CLK
+T => S2.OUTPUTSELECT
+T => S1.OUTPUTSELECT
+CLEAR => S2~reg0.PRESET
+CLEAR => S1~reg0.ACLR
+S1 <> S1~reg0
+S2 <> S2~reg0
+
+
+|UART|FREQUENCYDIVIDER:clk_gen|CONTADOR:P1|T_TRIGGER:\G1:17:T
+CLK => S2~reg0.CLK
+CLK => S1~reg0.CLK
+T => S2.OUTPUTSELECT
+T => S1.OUTPUTSELECT
+CLEAR => S2~reg0.PRESET
+CLEAR => S1~reg0.ACLR
+S1 <> S1~reg0
+S2 <> S2~reg0
+
+
+|UART|FREQUENCYDIVIDER:clk_gen|CONTADOR:P1|T_TRIGGER:\G1:18:T
+CLK => S2~reg0.CLK
+CLK => S1~reg0.CLK
+T => S2.OUTPUTSELECT
+T => S1.OUTPUTSELECT
+CLEAR => S2~reg0.PRESET
+CLEAR => S1~reg0.ACLR
+S1 <> S1~reg0
+S2 <> S2~reg0
+
+
+|UART|FREQUENCYDIVIDER:clk_gen|CONTADOR:P1|T_TRIGGER:\G1:19:T
+CLK => S2~reg0.CLK
+CLK => S1~reg0.CLK
+T => S2.OUTPUTSELECT
+T => S1.OUTPUTSELECT
+CLEAR => S2~reg0.PRESET
+CLEAR => S1~reg0.ACLR
+S1 <> S1~reg0
+S2 <> S2~reg0
+
+
+|UART|FREQUENCYDIVIDER:clk_gen|CONTADOR:P1|T_TRIGGER:\G1:20:T
+CLK => S2~reg0.CLK
+CLK => S1~reg0.CLK
+T => S2.OUTPUTSELECT
+T => S1.OUTPUTSELECT
+CLEAR => S2~reg0.PRESET
+CLEAR => S1~reg0.ACLR
+S1 <> S1~reg0
+S2 <> S2~reg0
+
+
+|UART|FREQUENCYDIVIDER:clk_gen|CONTADOR:P1|T_TRIGGER:\G1:21:T
+CLK => S2~reg0.CLK
+CLK => S1~reg0.CLK
+T => S2.OUTPUTSELECT
+T => S1.OUTPUTSELECT
+CLEAR => S2~reg0.PRESET
+CLEAR => S1~reg0.ACLR
+S1 <> S1~reg0
+S2 <> S2~reg0
+
+
+|UART|FREQUENCYDIVIDER:clk_gen|CONTADOR:P1|T_TRIGGER:\G1:22:T
+CLK => S2~reg0.CLK
+CLK => S1~reg0.CLK
+T => S2.OUTPUTSELECT
+T => S1.OUTPUTSELECT
+CLEAR => S2~reg0.PRESET
+CLEAR => S1~reg0.ACLR
+S1 <> S1~reg0
+S2 <> S2~reg0
+
+
+|UART|FREQUENCYDIVIDER:clk_gen|CONTADOR:P1|T_TRIGGER:\G1:23:T
+CLK => S2~reg0.CLK
+CLK => S1~reg0.CLK
+T => S2.OUTPUTSELECT
+T => S1.OUTPUTSELECT
+CLEAR => S2~reg0.PRESET
+CLEAR => S1~reg0.ACLR
+S1 <> S1~reg0
+S2 <> S2~reg0
+
+
+|UART|FREQUENCYDIVIDER:clk_gen|CONTADOR:P1|T_TRIGGER:\G1:24:T
+CLK => S2~reg0.CLK
+CLK => S1~reg0.CLK
+T => S2.OUTPUTSELECT
+T => S1.OUTPUTSELECT
+CLEAR => S2~reg0.PRESET
+CLEAR => S1~reg0.ACLR
+S1 <> S1~reg0
+S2 <> S2~reg0
+
+
+|UART|FREQUENCYDIVIDER:clk_gen|CONTADOR:P1|T_TRIGGER:\G1:25:T
+CLK => S2~reg0.CLK
+CLK => S1~reg0.CLK
+T => S2.OUTPUTSELECT
+T => S1.OUTPUTSELECT
+CLEAR => S2~reg0.PRESET
+CLEAR => S1~reg0.ACLR
+S1 <> S1~reg0
+S2 <> S2~reg0
+
+
+|UART|FREQUENCYDIVIDER:clk_gen|CONTADOR:P1|T_TRIGGER:\G1:26:T
+CLK => S2~reg0.CLK
+CLK => S1~reg0.CLK
+T => S2.OUTPUTSELECT
+T => S1.OUTPUTSELECT
+CLEAR => S2~reg0.PRESET
+CLEAR => S1~reg0.ACLR
+S1 <> S1~reg0
+S2 <> S2~reg0
+
+
+|UART|FREQUENCYDIVIDER:clk_gen|CONTADOR:P1|T_TRIGGER:\G1:27:T
+CLK => S2~reg0.CLK
+CLK => S1~reg0.CLK
+T => S2.OUTPUTSELECT
+T => S1.OUTPUTSELECT
+CLEAR => S2~reg0.PRESET
+CLEAR => S1~reg0.ACLR
+S1 <> S1~reg0
+S2 <> S2~reg0
+
+
+|UART|FREQUENCYDIVIDER:clk_gen|CONTADOR:P1|T_TRIGGER:\G1:28:T
+CLK => S2~reg0.CLK
+CLK => S1~reg0.CLK
+T => S2.OUTPUTSELECT
+T => S1.OUTPUTSELECT
+CLEAR => S2~reg0.PRESET
+CLEAR => S1~reg0.ACLR
+S1 <> S1~reg0
+S2 <> S2~reg0
+
+
+|UART|FREQUENCYDIVIDER:clk_gen|CONTADOR:P1|T_TRIGGER:\G1:29:T
+CLK => S2~reg0.CLK
+CLK => S1~reg0.CLK
+T => S2.OUTPUTSELECT
+T => S1.OUTPUTSELECT
+CLEAR => S2~reg0.PRESET
+CLEAR => S1~reg0.ACLR
+S1 <> S1~reg0
+S2 <> S2~reg0
+
+
+|UART|FREQUENCYDIVIDER:clk_gen|CONTADOR:P1|T_TRIGGER:\G1:30:T
+CLK => S2~reg0.CLK
+CLK => S1~reg0.CLK
+T => S2.OUTPUTSELECT
+T => S1.OUTPUTSELECT
+CLEAR => S2~reg0.PRESET
+CLEAR => S1~reg0.ACLR
+S1 <> S1~reg0
+S2 <> S2~reg0
+
+
+|UART|FREQUENCYDIVIDER:clk_gen|COMPARADOR:P2
+INPUT[0] => Equal0.IN31
+INPUT[0] => LessThan0.IN32
+INPUT[1] => Equal0.IN30
+INPUT[1] => LessThan0.IN31
+INPUT[2] => Equal0.IN29
+INPUT[2] => LessThan0.IN30
+INPUT[3] => Equal0.IN28
+INPUT[3] => LessThan0.IN29
+INPUT[4] => Equal0.IN27
+INPUT[4] => LessThan0.IN28
+INPUT[5] => Equal0.IN26
+INPUT[5] => LessThan0.IN27
+INPUT[6] => Equal0.IN25
+INPUT[6] => LessThan0.IN26
+INPUT[7] => Equal0.IN24
+INPUT[7] => LessThan0.IN25
+INPUT[8] => Equal0.IN23
+INPUT[8] => LessThan0.IN24
+INPUT[9] => Equal0.IN22
+INPUT[9] => LessThan0.IN23
+INPUT[10] => Equal0.IN21
+INPUT[10] => LessThan0.IN22
+INPUT[11] => Equal0.IN20
+INPUT[11] => LessThan0.IN21
+INPUT[12] => Equal0.IN19
+INPUT[12] => LessThan0.IN20
+INPUT[13] => Equal0.IN18
+INPUT[13] => LessThan0.IN19
+INPUT[14] => Equal0.IN17
+INPUT[14] => LessThan0.IN18
+INPUT[15] => Equal0.IN16
+INPUT[15] => LessThan0.IN17
+INPUT[16] => Equal0.IN15
+INPUT[16] => LessThan0.IN16
+INPUT[17] => Equal0.IN14
+INPUT[17] => LessThan0.IN15
+INPUT[18] => Equal0.IN13
+INPUT[18] => LessThan0.IN14
+INPUT[19] => Equal0.IN12
+INPUT[19] => LessThan0.IN13
+INPUT[20] => Equal0.IN11
+INPUT[20] => LessThan0.IN12
+INPUT[21] => Equal0.IN10
+INPUT[21] => LessThan0.IN11
+INPUT[22] => Equal0.IN9
+INPUT[22] => LessThan0.IN10
+INPUT[23] => Equal0.IN8
+INPUT[23] => LessThan0.IN9
+INPUT[24] => Equal0.IN7
+INPUT[24] => LessThan0.IN8
+INPUT[25] => Equal0.IN6
+INPUT[25] => LessThan0.IN7
+INPUT[26] => Equal0.IN5
+INPUT[26] => LessThan0.IN6
+INPUT[27] => Equal0.IN4
+INPUT[27] => LessThan0.IN5
+INPUT[28] => Equal0.IN3
+INPUT[28] => LessThan0.IN4
+INPUT[29] => Equal0.IN2
+INPUT[29] => LessThan0.IN3
+INPUT[30] => Equal0.IN1
+INPUT[30] => LessThan0.IN2
+INPUT[31] => Equal0.IN0
+INPUT[31] => LessThan0.IN1
+CTE[0] => Equal0.IN63
+CTE[0] => LessThan0.IN64
+CTE[1] => Equal0.IN62
+CTE[1] => LessThan0.IN63
+CTE[2] => Equal0.IN61
+CTE[2] => LessThan0.IN62
+CTE[3] => Equal0.IN60
+CTE[3] => LessThan0.IN61
+CTE[4] => Equal0.IN59
+CTE[4] => LessThan0.IN60
+CTE[5] => Equal0.IN58
+CTE[5] => LessThan0.IN59
+CTE[6] => Equal0.IN57
+CTE[6] => LessThan0.IN58
+CTE[7] => Equal0.IN56
+CTE[7] => LessThan0.IN57
+CTE[8] => Equal0.IN55
+CTE[8] => LessThan0.IN56
+CTE[9] => Equal0.IN54
+CTE[9] => LessThan0.IN55
+CTE[10] => Equal0.IN53
+CTE[10] => LessThan0.IN54
+CTE[11] => Equal0.IN52
+CTE[11] => LessThan0.IN53
+CTE[12] => Equal0.IN51
+CTE[12] => LessThan0.IN52
+CTE[13] => Equal0.IN50
+CTE[13] => LessThan0.IN51
+CTE[14] => Equal0.IN49
+CTE[14] => LessThan0.IN50
+CTE[15] => Equal0.IN48
+CTE[15] => LessThan0.IN49
+CTE[16] => Equal0.IN47
+CTE[16] => LessThan0.IN48
+CTE[17] => Equal0.IN46
+CTE[17] => LessThan0.IN47
+CTE[18] => Equal0.IN45
+CTE[18] => LessThan0.IN46
+CTE[19] => Equal0.IN44
+CTE[19] => LessThan0.IN45
+CTE[20] => Equal0.IN43
+CTE[20] => LessThan0.IN44
+CTE[21] => Equal0.IN42
+CTE[21] => LessThan0.IN43
+CTE[22] => Equal0.IN41
+CTE[22] => LessThan0.IN42
+CTE[23] => Equal0.IN40
+CTE[23] => LessThan0.IN41
+CTE[24] => Equal0.IN39
+CTE[24] => LessThan0.IN40
+CTE[25] => Equal0.IN38
+CTE[25] => LessThan0.IN39
+CTE[26] => Equal0.IN37
+CTE[26] => LessThan0.IN38
+CTE[27] => Equal0.IN36
+CTE[27] => LessThan0.IN37
+CTE[28] => Equal0.IN35
+CTE[28] => LessThan0.IN36
+CTE[29] => Equal0.IN34
+CTE[29] => LessThan0.IN35
+CTE[30] => Equal0.IN33
+CTE[30] => LessThan0.IN34
+CTE[31] => Equal0.IN32
+CTE[31] => LessThan0.IN33
+OUTPUT_EQUAL <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT_GREATER <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UART|FREQUENCYDIVIDER:clk_gen|myDFF:P3
+CLK => OUTPUT~reg0.CLK
+D <> <UNC>
+ENABLE => OUTPUT.OUTPUTSELECT
+OUTPUT <> OUTPUT~reg0
+
+
+|UART|ConversorSet:CVSET
+clk => SERIALPARALEL:S_P.clk
+clk => ParalelSequencial:P_S.clk
+TX => ParalelSequencial:P_S.start
+rst_main => SERIALPARALEL:S_P.rst
+Cserial_input => SERIALPARALEL:S_P.data_in
+Cparallel_output[7] <= SERIALPARALEL:S_P.data[7]
+Cparallel_output[6] <= SERIALPARALEL:S_P.data[6]
+Cparallel_output[5] <= SERIALPARALEL:S_P.data[5]
+Cparallel_output[4] <= SERIALPARALEL:S_P.data[4]
+Cparallel_output[3] <= SERIALPARALEL:S_P.data[3]
+Cparallel_output[2] <= SERIALPARALEL:S_P.data[2]
+Cparallel_output[1] <= SERIALPARALEL:S_P.data[1]
+Cparallel_output[0] <= SERIALPARALEL:S_P.data[0]
+CSerial_output <= ParalelSequencial:P_S.data_out
+CParalel_input[7] => ParalelSequencial:P_S.data_in[7]
+CParalel_input[6] => ParalelSequencial:P_S.data_in[6]
+CParalel_input[5] => ParalelSequencial:P_S.data_in[5]
+CParalel_input[4] => ParalelSequencial:P_S.data_in[4]
+CParalel_input[3] => ParalelSequencial:P_S.data_in[3]
+CParalel_input[2] => ParalelSequencial:P_S.data_in[2]
+CParalel_input[1] => ParalelSequencial:P_S.data_in[1]
+CParalel_input[0] => ParalelSequencial:P_S.data_in[0]
+
+
+|UART|ConversorSet:CVSET|SERIALPARALEL:S_P
+clk => start_enable.CLK
+clk => data[7]~reg0.CLK
+clk => data[6]~reg0.CLK
+clk => data[5]~reg0.CLK
+clk => data[4]~reg0.CLK
+clk => data[3]~reg0.CLK
+clk => data[2]~reg0.CLK
+clk => data[1]~reg0.CLK
+clk => data[0]~reg0.CLK
+clk => cont[0].CLK
+clk => cont[1].CLK
+clk => cont[2].CLK
+clk => cont[3].CLK
+data_in => data.DATAB
+data_in => data.DATAB
+data_in => data.DATAB
+data_in => data.DATAB
+data_in => data.DATAB
+data_in => data.DATAB
+data_in => data.DATAB
+data_in => data.DATAB
+data_in => process_0.IN1
+rst => data[7]~reg0.ACLR
+rst => data[6]~reg0.ACLR
+rst => data[5]~reg0.ACLR
+rst => data[4]~reg0.ACLR
+rst => data[3]~reg0.ACLR
+rst => data[2]~reg0.ACLR
+rst => data[1]~reg0.ACLR
+rst => data[0]~reg0.ACLR
+rst => start_enable.ENA
+rst => cont[3].ENA
+rst => cont[2].ENA
+rst => cont[1].ENA
+rst => cont[0].ENA
+data[7] <= data[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data[6] <= data[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data[5] <= data[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data[4] <= data[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data[3] <= data[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data[2] <= data[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data[1] <= data[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data[0] <= data[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UART|ConversorSet:CVSET|ParalelSequencial:P_S
+clk => control[0].CLK
+clk => control[1].CLK
+clk => control[2].CLK
+clk => control[3].CLK
+clk => data_out~reg0.CLK
+data_in[7] => Mux0.IN15
+data_in[6] => Mux0.IN14
+data_in[5] => Mux0.IN13
+data_in[4] => Mux0.IN12
+data_in[3] => Mux0.IN11
+data_in[2] => Mux0.IN10
+data_in[1] => Mux0.IN9
+data_in[0] => Mux0.IN8
+start => data_out.OUTPUTSELECT
+start => control[0].ENA
+start => control[1].ENA
+start => control[2].ENA
+start => control[3].ENA
+data_out <= data_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

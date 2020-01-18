@@ -1,0 +1,89 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "SerialOut",
+					"strict" : false
+				},
+				{
+					"name" : "ParallelOut[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ParallelOut[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ParallelOut[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ParallelOut[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ParallelOut[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ParallelOut[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ParallelOut[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ParallelOut[0]",
+					"strict" : false
+				},
+				{
+					"name" : "TX",
+					"strict" : false
+				},
+				{
+					"name" : "ParallelIN[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ParallelIN[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ParallelIN[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ParallelIN[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ParallelIN[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ParallelIN[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ParallelIN[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ParallelIN[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SerialIn",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
