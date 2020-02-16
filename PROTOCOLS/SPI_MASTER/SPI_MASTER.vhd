@@ -1,10 +1,14 @@
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
 
+
+--Everything that involves clk should be change, cause this HDL was made according to the clock of my board, unless you board have the same 50 Mhz of external clock
+--you can change the output speed of the frequency divider at the frequency divider hdl, here im using 5Mhz
+
 entity SPI_MASTER is 
 	port(
 
-		clk_50_Mhz: in std_logic;
+		clk_50_Mhz: in std_logic;							
 		register_in: in std_logic_vector(7 downto 0);				
 		register_out: out std_logic_vector(7 downto 0);
 		SPI_MODE: IN std_logic_vector(1 downto 0);				
